@@ -1,0 +1,239 @@
+/* ======= VARIABLES CSS ======== */
+
+:root {
+  /* pseudoclase */
+
+  /* Colors */
+  --body-color: #00000020;
+  --primary-color: #ffffff;
+  --title-color: #f3fb04fa;
+  --text-color: #fffffff2;
+  --hover-text-color: #fffffff2;
+  --button-color-light: #38a0d8;
+  --button-color-dark: #7d69f1;
+  --hover-button-color: #f60e0eed;
+  --text-color-light: #116492;
+  --text-color-dark: #fcfcfc;
+  --search-color-light: #5ba6d9c8;
+  --search-color-dark: #1d1939c8;
+  --border-color: #fffffff2;
+  --shadow-color: #3b3a3a33;
+  --overlay-color: #3b3a3aa7;
+
+  /* Font size and typography */
+  --body-font: "Lato", sans-serif;
+  --size-extra-big: 4rem;
+  --size-big: 2.5rem;
+  --size-large: 2rem;
+  --size-medium: 1.5rem;
+  --size-normal: 1rem;
+  --size-small: 0.75rem;
+  --size-tiny: 0.5rem;
+
+  /* Font weight */
+  --weight-thin: 100;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 600;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  /* Margins, Paddings and Borders */
+  --sp-0-065: 0.065rem;
+  --sp-0--125: -0.125rem;
+  --sp-0-125: 0.125rem;
+  --sp-0-15: 0.15rem;
+  --sp-0-2: 0.2rem;
+  --sp-0-25: 0.25rem;
+  --sp-0-5: 0.5rem;
+  --sp-0-625: 0.625rem;
+  --sp-0-75: 0.75rem;
+  --sp-1: 1rem;
+  --sp-1-25: 1.25rem;
+  --sp-1-5: 1.5rem;
+  --sp-1-75: 1.75rem;
+  --sp-2: 2rem;
+  --sp-2-5: 2.5rem;
+  --sp-3: 3rem;
+  --sp-3-125: 3.125rem;
+  --sp-4: 4rem;
+  --sp-5: 5rem;
+
+  /* z-index */
+  --z-fixed: 1;
+  --z-modal: 2;
+  --z-loader: 100;
+}
+
+/* ======= BASE ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--body-font);
+}
+
+html .background_light {
+  background: radial-gradient(circle, #d5f3ff 0%, #51b4e8 180%);
+}
+
+html .background_dark {
+  background: radial-gradient(circle, #53388f 0%, #2f2958 100%);
+}
+
+/* ======= MAIN ======== */
+
+.app__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* overflow: hidden; */
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: var(--size-normal);
+  margin: var(--sp-1) var(--sp-0-5);
+}
+
+.app__title {
+  font-size: var(--size-medium);
+  line-height: 1.1;
+  text-align: center;
+  color: var(--text-color);
+  margin: var(--sp-2) var(--sp-1-5);
+}
+
+.app__content {
+  width: 450px;
+  min-height: 400px;
+  padding: var(--sp-0-5);
+  margin: var(--sp-2) auto;
+  border-radius: 50px;
+}
+
+/* ======= SEARCH CITY ======== */
+.app__search {
+  text-align: center;
+  position: relative;
+  margin: var(--sp-1) var(--sp-0-5);
+}
+
+input {
+  outline: none;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 0 var(--sp-4);
+  border-radius: 20px;
+  font-size: var(--sp-1-25);
+  border: none;
+  transition: all 0.7s ease;
+}
+
+::placeholder {
+  color: var(--text-color);
+}
+
+.app__search-btn {
+  position: absolute;
+  left: 0px;
+  margin-left: 10px;
+  top: 5px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 20%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.app__search-btn i {
+  font-size: var(--sp-1-75);
+  line-height: 40px;
+  transition: all 0.7s ease;
+}
+
+.app__search input {
+  width: 450px;
+}
+
+.app__search:hover i {
+  transform: rotate(-360deg);
+}
+
+.app__search .search_light {
+  background: var(--search-color-light);
+  color: #fcfcfc;
+}
+
+.app__search .search_light::placeholder {
+  color: #fcfcfc;
+}
+
+.app__search .search_dark {
+  background: var(--search-color-dark);
+  color: #4d5b64;
+}
+
+.app__search .search_dark::placeholder {
+  color: #4d5b64;
+}
+
+/* ======= TOOGLE ======== */
+
+.app__toogle {
+  text-align: center;
+  margin: var(--sp-1) var(--sp-0-5);
+}
+
+.app__toogle-switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 40px;
+  margin: 0 var(--sp-0-625);
+}
+
+.app__toogle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--button-color-light);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.app__toogle-switch input {
+  display: none;
+}
+
+.app__toogle-slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 5px;
+  bottom: 5px;
+  background-color: var(--primary-color);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+input:checked + .app__toogle-slider {
+  background-color: var(--button-color-dark);
+}
+
+input:checked + .app__toogle-slider::before {
+  transform: translateX(50px);
+}

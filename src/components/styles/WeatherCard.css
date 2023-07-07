@@ -1,0 +1,152 @@
+/* ======= WEATHER CARD ======== */
+
+.weather {
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: var(--sp-0-625) var(--sp-0--125) var(--sp-1-75) var(--sp-0-25)
+    var(--shadow-color);
+  margin: var(--sp-0-625) auto var(--sp-3-125) auto;
+  padding: 0 var(--sp-1-25) var(--sp-1-25) var(--sp-1-25);
+}
+
+.weather__header,
+.weather__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather__footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weather__header-city {
+  font-weight: var(--weight-black);
+  font-size: var(--sp-2);
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.weather__header-date {
+  font-weight: var(--weight-medium);
+  line-height: 1.2;
+  margin-top: var(--sp-0-25);
+}
+
+.weather__header-description {
+  font-weight: var(--weight-regular);
+  font-size: var(--sp-1);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.weather__header-icon {
+  width: 150px;
+}
+
+.weather__main-temperature {
+  font-weight: 600;
+  font-size: var(--sp-5);
+  width: auto;
+  letter-spacing: -5px;
+  margin: var(--sp-0-5) 0;
+}
+
+.weather__main-details {
+  width: 40%;
+  padding-left: var(--sp-1-25);
+}
+
+.weather__main-details-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather__main-details-label {
+  text-align: left;
+  font-weight: var(--weight-regular);
+  font-size: var(--sp-0-75);
+}
+
+.weather__main-details-value {
+  text-align: right;
+  font-weight: var(--weight-medium);
+  font-size: var(--sp-0-75);
+}
+
+.weather__main-details-label.weather__header {
+  border-bottom: var(--sp-0-065) solid var(--border-color);
+}
+
+.weather__footer-button {
+  font-size: var(--size-normal);
+  color: var(--text-color);
+  text-shadow: var(--sp-0-2) var(--sp-0-2) var(--sp-0-25) var(--shadow-color);
+  border: none;
+  border-radius: var(--sp-1);
+  box-shadow: var(--sp-0-125) var(--sp-0-125) var(--sp-0-125) var(--sp-0-065)
+    var(--shadow-color);
+  margin: 0 auto;
+  padding: var(--sp-0-5) var(--sp-2);
+  cursor: pointer;
+}
+
+.weather__footer-button:hover {
+  background-color: var(--hover-button-color);
+  color: var(--text-color);
+}
+
+.button_light {
+  background: var(--button-color-light);
+}
+
+.button_dark {
+  background: var(--button-color-dark);
+}
+
+.content_light {
+  background: linear-gradient(180deg, #e5f2ff 0%, #d5f3ff 97.4%);
+  color: var(--text-color-light);
+}
+
+.content_dark {
+  background: linear-gradient(180deg, #5836b3 0%, #5936b4 0.01%, #362a84 100%);
+  color: var(--text-color-dark);
+}
+
+/* @media screen and (max-width: 700px) {
+  
+      .app {
+        max-width: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      .app__header {
+        max-width: 100%;
+        flex-direction: column;
+        height: auto;
+      }
+  
+    }
+  
+    @media screen and (max-width: 500px) {
+  
+      .app {
+        max-width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      .app__header {
+        max-width: 100%;
+        flex-direction: column;
+        height: auto;
+      }
+  
+    } */
